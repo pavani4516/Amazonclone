@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="project.html">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+    <style>
+        .container{
+            width:100%;
+            height:480px;
+            background-color:darkblue;
+        }
+        .border{
+            background-color:white;
+            width:250px;
+            height:350px;
+            padding:25px;
+            position:absolute;
+            top:60px;
+            left:330px;
+            border:1px solid black;
+        }
+        .div1{
+            border:1px solid black;
+            border-radius:5px;
+            width:30px;
+            position:absolute;
+            left:120px;
+            
+
+        }
+        input{
+            width:200px;
+            
+        }
+        button{
+            width:210px;
+            background-color:deeppink;
+            color:white;
+            border-radius:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="border">
+        <p>SIGN UP</p>
+        <br>
+        <p>EMAIL</p>
+        <input type="text">
+        <br>
+        <br>
+
+        <p>PASSWORD</p>
+        <input type="password">
+        <br>
+        <br>
+        <br>
+        <button onclick="open3()">SIGN UP</button>
+        <br>
+        <br>
+
+        <div class="div1">
+           <center>OR</center> 
+        </div>
+        <br>
+
+        <center><i class="fa-brands fa-google" style="padding:15px"></i>
+        <i class="fa-brands fa-facebook" style="padding:15px"></i>
+        <i class="fa-brands fa-linkedin-in" style="padding:15px"></i></center>
+        <br>
+        
+        
+        <center><p>Already a user? <a href="">LOGIN</a></p></center>
+    </div>
+</div>
+</body>
+<script>
+    function open3(){
+            window.open("http://127.0.0.1:5500/project.html");
+        }
+</script>
+
+</html>

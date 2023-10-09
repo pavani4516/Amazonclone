@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.html">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="login.html">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width:100%;
+            height:400px;
+            background:linear-gradient(to left,orange,crimson);
+        }
+        .b{
+            background-color:bisque;
+             width:490px;
+             height:290px;
+             margin-left:370px;
+             position:left;
+             top:50px;
+             padding:20px;
+              }
+        
+
+        input{
+            width:230px;
+            height:18px;
+            border:1px solid black;
+        }
+        .a{
+            display: block;
+            margin-left: 50px;
+        }
+        .sigin{
+            margin-top:80px;
+        }
+        #button2{
+            margin-left: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+       <div class="sigin"> <h2>S i g n u p</h2>
+        <br>
+            <h4>if you have already have an account</h4>
+            <button id="button2" onclick="open2()">Login</button></div>
+        <div class="b">
+            <input type="text" placeholder="FIRST NAME" id="a">
+            <input type="text" placeholder="SURNAME" id="b">
+            <br>
+            <br>
+            <input type="text" placeholder="EMAIL OR PHONENO" id="c">
+            <br>
+            <br>
+            <input type="password" placeholder="PASSWORD" id="d">
+            <br>
+            <br>
+            <h3>Date of Birth</h3>
+            <select>
+                <optgroup value="date">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                    <option value="">13</option>
+                    <option value="">14</option>
+                    <option value="">15</option>
+                    <option value="">16</option>
+                    <option value="">17</option>
+                    <option value="">18</option>
+                    <option value="">19</option>
+                    <option value="">20</option>
+                    <option value="">21</option>
+                    <option value="">22</option>
+                    <option value="">23</option>
+                    <option value="">24</option>
+                    <option value="">25</option>
+                    <option value="">26</option>
+                    <option value="">27</option>
+                    <option value="">28</option>
+                    <option value="">29</option>
+                    <option value="">30</option>
+                    <option value="">31</option>
+
+
+                </optgroup>
+            </select>
+            <select>
+                <optgroup>
+                    <option value="">Jan</option>
+                    <option value="">Feb</option>
+                    <option value="">Mar</option>
+                    <option value="">Apr</option>
+                    <option value="">May</option>
+                    <option value="">June</option>
+                    <option value="">July</option>
+                    <option value="">Aug</option>
+                    <option value="">Sep</option>
+                    <option value="">Oct</option>
+                    <option value="">Nov</option>
+                    <option value="">Dec</option>
+                </optgroup>
+            </select>
+            <select>
+                <optgroup>
+                    <option value="">1999</option>
+                    <option value="">2000</option>
+                    <option value="">2001</option>
+                    <option value="">2002</option>
+                    <option value="">2003</option>
+                </optgroup>
+            </select>
+            <h3>Gender</h3>
+            <br>
+            <input type="radio">Female
+            <input type="radio">Male
+            <input type="radio">Others
+            <br>
+            <br>
+        
+            <center><button onclick="demo()" id="e">Signup</button></center>
+            <h4 id="abcd"></h4>
+            
+        
+            
+        </div>
+        
+    </div>
+    <script>
+        function demo(){
+            let name=document.getElementById("a").value;
+            let c=0;
+            if(name==""){
+                document.getElementById("a").style.border="2px solid red";
+
+            }
+            else{
+                let name1=document.getElementById("a").value;
+                sessionStorage.setItem("NAME",name1);
+                c++;
+            }
+            let surname=document.getElementById("b").value;
+            if(surname==""){
+                document.getElementById("b").style.border="2px solid red";
+            }
+            else{
+                let surname1=document.getElementById("b").value;
+                sessionStorage.setItem("SURNAME",surname1);
+                c++;
+            }
+            let email=document.getElementById("c").value;
+            if(email==""){
+                document.getElementById("c").style.border="2px solid red";
+            }
+            else{
+                let email1=document.getElementById("c").value;
+                sessionStorage.setItem("EMAILORPHONENUMBER",email1);
+                c++;
+            }
+            let password=document.getElementById("d").value;
+            if(password=="")
+            {
+                document.getElementById("d").style.border="2px solid red";
+            }
+            else{
+                let password1=document.getElementById("d").value;
+                sessionStorage.setItem("PASSWORD",password1);
+                c++;
+            }
+            if(c==4){
+                let count=document.getElementById("e").value;
+                count.innerHTML="signin is successfully completed!!";
+                //console.log("signin is successfully completed!!");
+            }
+            else{
+               document.getElementById("e").style.border="2px solid red";
+            }
+        }
+        function open2(){
+            window.open("http://127.0.0.1:5500/login.html");
+        }
+    </script>
+</body>
+</html>
